@@ -1,4 +1,3 @@
-// hardhat.config.js
 require("@nomicfoundation/hardhat-toolbox");
 require("dotenv").config();
 
@@ -21,7 +20,7 @@ module.exports = {
     },
 
     sepolia: {
-      url: process.env.SEPOLIA_RPC_URL,
+      url: process.env.SEPOLIA_RPC_URL || "",
       accounts: process.env.PRIVATE_KEY
         ? [process.env.PRIVATE_KEY]
         : [],
